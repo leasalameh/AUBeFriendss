@@ -1,0 +1,87 @@
+name: project_app
+description: "A new Flutter project."
+
+
+publish_to: 'none' 
+
+
+
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+
+
+
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  line_awesome_flutter: ^2.0.0
+  google_fonts: ^6.1.0
+  get: ^4.6.6
+  otp_text_field: ^1.1.3
+  flutter_otp_text_field: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  
+  
+  
+  
+  
+  flutter_lints: ^2.0.0
+
+
+
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/src/assets/images/login/
+    - lib/src/assets/images/sign_up/
+    - lib/src/assets/images/welcome_screen_images/
+    - lib/src/assets/images/forget_password/
+    - lib/src/assets/images/profile_pic/
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
