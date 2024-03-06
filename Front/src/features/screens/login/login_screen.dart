@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:project_app/backend/auth.dart';
 import 'package:project_app/src/constants/colors.dart';
 import 'package:project_app/src/constants/sizes.dart';
 import 'package:project_app/src/features/screens/login/widgets/login_footer_widget.dart';
 import 'package:project_app/src/features/screens/login/widgets/login_header_widget.dart';
 import 'package:project_app/src/features/screens/login/widgets/login_form_widget.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+// Define the StatefulWidget
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+// Define the corresponding State class
+class _LoginScreenState extends State<LoginScreen> {
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
