@@ -5,9 +5,10 @@ import 'package:project_app/src/constants/image_strings.dart';
 import 'package:project_app/src/constants/text_strings.dart';
 import 'package:project_app/src/features/screens/login/login_screen.dart';
 import 'package:project_app/src/features/screens/signup/signup_screen.dart';
+import 'package:project_app/backend/auth.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +69,19 @@ class WelcomeScreen extends StatelessWidget {
                       );
                     },
                     child: Text(tSignup.toUpperCase()),
+                  ),
+                ),
+                const SizedBox(width: 10.0),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      dynamic result = await _auth.signInAnon();
+                      if (result == null)
+                        print('error signing in');
+                      else
+                        print(result);
+                    },
+                    child: Text('anon'),
                   ),
                 ),
               ],
